@@ -5,7 +5,7 @@ require_once __DIR__.'/../vendor/autoload.php'; // load composer
 use Goodby\CSV\Import\Standard\Lexer;
 use Goodby\CSV\Import\Standard\Interpreter;
 use Goodby\CSV\Import\Standard\LexerConfig;
-
+use PDO;
 $pdo = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
 $pdo->query('CREATE TABLE IF NOT EXISTS user2 (id INT, `name` VARCHAR(255), email VARCHAR(255), PRIMARY KEY (`id`))');
 
